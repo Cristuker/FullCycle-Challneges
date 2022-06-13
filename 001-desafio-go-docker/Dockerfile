@@ -1,11 +1,9 @@
-FROM golang:1.18-alpine3.16
-
-WORKDIR /app
-
+FROM golang:1.18-alpine AS builder
+WORKDIR /usr/src/app
 COPY ./main.go .
+RUN go build main.go
 
-RUN 
-
-# RUN rm -rf main.go
-
-CMD [ "go", "main.go" ]
+FROM scratch
+WORKDIR /usr/src/app
+COPY --from=builder /usr/src/app .
+CMD [ "./main" ]
