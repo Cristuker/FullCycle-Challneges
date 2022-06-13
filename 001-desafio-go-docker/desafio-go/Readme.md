@@ -6,5 +6,5 @@ $ docker build -t <nomeDaImage> .
 ## Como rodar
 
 ```bash
-$ docker run cristuker/go2mb
+$ docker run <nomeDaImage>
 ```
