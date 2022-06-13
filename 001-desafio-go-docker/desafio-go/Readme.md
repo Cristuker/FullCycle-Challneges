@@ -8,3 +8,5 @@ $ docker build -t <nomeDaImage> .
 ```bash
 $ docker run <nomeDaImage>
 ```
+
+[Link para imagem no docker hub](https://hub.docker.com/repository/docker/cristuker/go2mb)
